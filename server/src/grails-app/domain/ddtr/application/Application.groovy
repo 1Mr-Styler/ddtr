@@ -15,4 +15,8 @@ class Application {
         proxy nullable: true
         address nullable: true
     }
+
+    String toString() {
+        "ID: ${this.id} - ${status.toString()}"
+    }
 }

@@ -61,6 +61,8 @@ dependencies {
     //3rd Part
     compile 'org.grails.plugins:spring-security-core:3.2.3'
 
+
+    compile 'com.opencsv:opencsv:4.5'
 }
 
 bootRun {
