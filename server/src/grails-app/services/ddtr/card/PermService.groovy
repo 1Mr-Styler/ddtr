@@ -1,6 +1,8 @@
 package ddtr.card
 
 import com.opencsv.CSVReader
+import ddtr.application.Applicant
+import ddtr.application.CardStatus
 import grails.gorm.services.Service
 import org.springframework.web.multipart.MultipartFile
 
@@ -33,9 +35,19 @@ abstract class PermService implements PermServiceInterface {
             }
         }
         data.remove(0)
-        data.each {
-            println(it)
+        data.each { info ->
+            println(info)
             //Find Applicants by phone
+            Applicant applicant = Applicant.findByPhone("0" + info[5])
+            Perm perm = Perm.findByApplicant(applicant)
+
+            if (perm != null) {
+                perm.ref = info[1]
+                perm.license = info[2]
+                perm.application.status = CardStatus.READY
+
+                perm.save(flush: true)
+            }
         }
 
         true

@@ -1,6 +1,7 @@
 package ddtr.card
 
 import ddtr.User
+import ddtr.application.Applicant
 import ddtr.application.Application
 import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
@@ -29,7 +30,10 @@ class TempController {
     }
 
     def save() {
-        Temp temp = new Temp(application: Application.get(params.long('application.id')), validity: params.validity)
+        Temp temp = new Temp(
+                applicant: Applicant.get(params.long('applicant.id')),
+                application: Application.get(params.long('application.id')),
+                validity: params.validity)
         if (temp == null) {
             notFound()
             return

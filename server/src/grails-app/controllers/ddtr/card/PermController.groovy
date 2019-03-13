@@ -1,5 +1,6 @@
 package ddtr.card
 
+import ddtr.application.Applicant
 import ddtr.application.Application
 import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
@@ -39,7 +40,8 @@ class PermController {
     }
 
     def save() {
-        Perm perm = new Perm(application: Application.get(params.long('application.id')), validity: params.validity)
+        Perm perm = new Perm(applicant: Applicant.get(params.long('applicant.id')),
+                application: Application.get(params.long('application.id')), validity: params.validity)
         if (perm == null) {
             notFound()
             return

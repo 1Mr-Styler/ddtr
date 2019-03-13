@@ -1,5 +1,8 @@
 package ddtr
 
+import ddtr.application.Delivery
+import ddtr.application.Proxy
+
 class BootStrap {
 
     def init = { servletContext ->
@@ -22,6 +25,10 @@ class BootStrap {
         UserAuthority.create(user, admin)
         UserAuthority.create(user, capture)
         UserAuthority.create(user, payment)
+
+
+        new ddtr.application.Application(delivery: Delivery.SELF).save()
+        new ddtr.application.Application(delivery: Delivery.PROXY, proxy: new Proxy(names: "James Smith", phone: "02343523", idnum: "21232", idtype: "DL").save()).save()
     }
     def destroy = {
     }

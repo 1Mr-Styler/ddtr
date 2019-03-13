@@ -1,5 +1,6 @@
 package ddtr.card
 
+import ddtr.application.Applicant
 import ddtr.application.Application
 
 class Perm {
@@ -7,6 +8,7 @@ class Perm {
     String ref
     Validity validity
     Application application
+    Applicant applicant
 
     static constraints = {
         ref nullable: true

@@ -5,7 +5,7 @@ class Application {
     CardStatus status = CardStatus.PROCESSING
     boolean payment = false
     Delivery delivery
-    PaymentMode paymentMode
+    PaymentMode paymentMode = PaymentMode.NONE
     String otp
     Proxy proxy
     String address
