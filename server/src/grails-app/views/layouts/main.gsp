@@ -56,6 +56,9 @@
         <li class="nav-item">
             <a class="nav-link" href="${createLink(controller: "perm", action: "load")}">Load Cards</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="${createLink(controller: "history")}">Login History</a>
+        </li>
     </ul>
 
 </nav>
