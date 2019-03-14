@@ -2,4 +2,4 @@
 
 export JAVA_HOME=/root/.sdkman/candidates/java/current
 
-./grailsw run --port=8080 --debug-jvm
+./grailsw run --port=8080 
