@@ -37,19 +37,19 @@
 
         </li>
         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">Applicants</a>
+
+            <div class="dropdown-menu" style="color: #000000">
+                <a class="dropdown-item" href="${createLink(controller: "applicant")}">Applicants</a>
+            </div>
+
+        </li>
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">Cards</a>
 
             <div class="dropdown-menu" style="color: #000000">
                 <a class="dropdown-item" href="${createLink(controller: "temp")}">Temporary Card</a>
                 <a class="dropdown-item" href="${createLink(controller: "perm")}">Permanent Card</a>
-            </div>
-
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">Applicants</a>
-
-            <div class="dropdown-menu" style="color: #000000">
-                <a class="dropdown-item" href="${createLink(controller: "applicant")}">Applicants</a>
             </div>
 
         </li>

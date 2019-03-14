@@ -13,5 +13,6 @@ class Perm {
     static constraints = {
         ref nullable: true
         license nullable: true
+        application unique: true
     }
 }

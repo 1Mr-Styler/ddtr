@@ -10,10 +10,22 @@ class Application {
     Proxy proxy
     String address
 
+    boolean statusIsDirty = false
+    boolean paymentIsDirty = false
+    static transients = ['paymentIsDirty', 'statusIsDirty']
+
     static constraints = {
+        id(nullable: true)
+        status(nullable: false)
         otp nullable: true
         proxy nullable: true
         address nullable: true
+    }
+
+    def beforeUpdate() {
+        statusIsDirty = this.isDirty('status')
+        paymentIsDirty = this.isDirty('payment')
+        true
     }
 
     String toString() {

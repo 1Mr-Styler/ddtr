@@ -60,8 +60,7 @@ dependencies {
     
     //3rd Part
     compile 'org.grails.plugins:spring-security-core:3.2.3'
-
-
+    compile 'org.grails:grails-datastore-rest-client:5.0.0.RC2'
     compile 'com.opencsv:opencsv:4.5'
 }
 
