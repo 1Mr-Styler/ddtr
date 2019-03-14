@@ -35,7 +35,7 @@ class EventService {
                     SMS sms = new SMS()
                     sms.addRecpt(card.applicant.phone)
                     sms.setMsg(message)
-//                    sms.send()
+                    sms.send()
 
                 } else if (application.status == CardStatus.COLLECTED) {
                     String by = application?.proxy?.names ?: "you"
@@ -46,7 +46,7 @@ class EventService {
                     SMS sms = new SMS()
                     sms.addRecpt(card.applicant.phone)
                     sms.setMsg(message)
-//                    sms.send()
+                    sms.send()
                 }
             } else if (application.paymentIsDirty) {
                 if (application.payment) {
@@ -60,7 +60,7 @@ class EventService {
                 SMS sms = new SMS()
                 sms.addRecpt(card.applicant.phone)
                 sms.setMsg(message)
-//                sms.send()
+                sms.send()
             }
 
             println(application.errors)
