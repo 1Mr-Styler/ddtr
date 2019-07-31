@@ -2,4 +2,5 @@
 
 export JAVA_HOME=/root/.sdkman/candidates/java/current
 
-./grailsw run --port=8080 
+echo "Running DDTR Server"
+./gradlew bootRun
